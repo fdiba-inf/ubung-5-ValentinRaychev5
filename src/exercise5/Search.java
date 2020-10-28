@@ -7,9 +7,9 @@ public class Search {
         Scanner input = new Scanner(System.in);
 
         System.out.print("Enter number count: ");
-        int numberCount = input.nextInt();
+        int length = input.nextInt();
 
-        int[] numbers = new int[numberCount];
+        int[] numbers = new int[length];
 
         System.out.println("Enter numbers: ");
         for (int index = 0; index < numbers.length; index++) {
@@ -18,10 +18,13 @@ public class Search {
 
         System.out.print("Search for number: ");
         int number = input.nextInt();
+        
+        for (numberIndex = 0; numberIndex < length; numberIndex++)  {
+          if  (numbers[numberIndex] == number)  {
+            System.out.println("Number index: " + numberIndex);
+          }
+        }
 
-        int numberIndex = -1;
-        // Search for number in numbers
-
-        System.out.println("Number index: " + numberIndex);
+        
     }
 }
