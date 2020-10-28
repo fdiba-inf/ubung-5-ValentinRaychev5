@@ -1,26 +1,28 @@
 package exercise5;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class UniqueNumbers {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Enter number count: ");
-        int numberCount = input.nextInt();
+        int length = input.nextInt();
 
-        int[] numbers = new int[numberCount];
+        int[] numbers = new int[length];
 
-        System.out.println("Enter numbers: ");
         for (int index = 0; index < numbers.length; index++) {
             numbers[index] = input.nextInt();
         }
 
-        int[] uniqueNumbers = new int[numbers.length];
-        // Find unique numbers in numbers
+        int number = input.nextInt();
+        
+        for (numberIndex = 0; numberIndex < length; numberIndex++)  {
+          int currentNum = numbers[];
+          if  (numbers[numberIndex] == number)  {
 
-        String uniqueNumbersAsString = Arrays.toString(uniqueNumbers);
-        System.out.println("Unique numbers: " + uniqueNumbersAsString);
+          }
+        }
+
+        
     }
 }
