@@ -7,17 +7,27 @@ public class DescendingSort {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Enter number count: ");
-        int numberCount = input.nextInt();
+        int length = input.nextInt();
 
-        int[] numbers = new int[numberCount];
-
-        System.out.println("Enter numbers: ");
+        int[] numbers = new int[length];
         for (int index = 0; index < numbers.length; index++) {
             numbers[index] = input.nextInt();
         }
 
-        // Sort numbers in descending order
+        for (int i = 0; i < numbers.length; i++)  {
+
+            int maxIndex = i;
+            for (int k = i + 1; k < numbers.length; k++)   {
+                if (numbers[k] > numbers[maxIndex])   {
+                    maxIndex = k;
+                }
+            }
+
+            int temp = numbers[i];
+            numbers[i] = numbers[maxIndex];
+            numbers[maxIndex] = temp;
+
+        }
 
         String numbersAsString = Arrays.toString(numbers);
         System.out.println("Sorted numbers: " + numbersAsString);
